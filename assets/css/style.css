@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* areas grid */
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(249, 124, 145);
+  padding: 16px 32px;
+  box-shadow: 0 4px 10px rgba(149, 157, 165, 0.2);
+  border-bottom: 1px solid #f7dce4;
+}
+
+nav h5 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+aside {
+  background: linear-gradient(135deg, #f97c91, #ffb7c5);
+  color: #fff;
+  padding: 40px 24px;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset{
+    padding: 10px;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
+
+body{
+    font-family: 'Inter';
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'nav nav nav nav'
+    'aside main main main'
+    'footer footer footer footer';
+    min-height: 100vh;
+}
+
+.container-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding: 40px;
+}
+
+
+@media screen and (max-width: 769px) {
+    body{
+        grid-template-areas: 
+        'nav'
+        'aside'
+        'main'
+        'footer';
+    }
+
+    .container-products{
+    grid-template-columns: 1fr;
+    }
+}
+
+/* nav */
+nav{
+    background-color: rgba(255, 255, 255, 0.672);
+    text-align: center;
+    color: rgb(249, 124, 145);
+    padding: 12px;
+}
+
+nav h5{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+span{
+    font-weight: 300;
+}
+
+/* aside */
+aside{
+    gap: 16px;
+}
+
+select{
+    padding: 8px;
+    border: none;
+}
+
+select h2{
+    font-family: 'Plus Jakarta Sans';
+}
+
+/* main */
+main h3{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 30px 30px 0px 35px;
+}
+
+
+.contain-products {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgb(189, 189, 189);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.contain-products:hover {
+  box-shadow: 0 6px 16px rgba(88, 42, 50, 0.2); 
+}
+
+.contain-products p{
+    text-align: left;
+}
+
+.contain-img {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.contain-img:hover {
+  transform: scale(1.03);
+}
+
+.contain-products .tag{
+    background-color: rgb(187, 12, 222);
+    color: white;
+    border-radius: 20px;
+    max-width: 80px;
+    margin: 10px;
+    animation: infinite;
+    box-shadow: 0 0 5px rgba(187, 12, 222, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.contain-products .tag span{
+    font-size: 16px;
+}
+
+.img-1{
+    background-image: url(../img/limpiador-bifasico.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-1:hover{
+    background-image: url(../img/limpiador-bifasico-02.jpg);
+}
+
+.img-2{
+    background-image: url(../img/exfoliante-fisico.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-2:hover{
+    background-image: url(../img/exfoliante-fisico-02.jpg);
+}
+
+.img-3{
+    background-image: url(../img/bruma-facial.webp);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-4{
+    background-image: url(../img/exfoliante-quimico.jpg);
+     background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-4:hover{
+    background-image: url(../img/exfoliante-quimico-02.jpg);
+}
+
+.img-5{
+    background-image: url(../img/mascarilla-nocturna.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-5:hover{
+    background-image: url(../img/mascarilla-nocturna-02.jpg);
+}
+
+.img-6{
+    background-image: url(../img/contorno-ojos.webp);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-6:hover{
+    background-image: url(../img/contorno-ojos-02.webp);
+}
+
+.img-7{
+    background-image: url(../img/parches.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-7:hover{
+    background-image: url(../img/parches-02.jpg);
+}
+
+.img-8{
+    background-image: url(../img/protector-solar.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-out;
+}
+
+.img-8:hover{
+    background-image: url(../img/protector-solar-02.jpg);
+}
+
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ac6e84; 
+    color: #fff0f5;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(247, 163, 192, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: #e83e8c; 
+    transform: scale(1.05);
+}
+
+
+/*  footer */
+footer{
+    background-color: rgba(177, 111, 122, 0.662);
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}   
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer div:hover {
+  transform: scale(1.05);
+}
+
+.social-media{
+     background-color: #e83e8c; 
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(232, 62, 140, 0.4); 
+}
